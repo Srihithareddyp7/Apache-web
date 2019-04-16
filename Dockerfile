@@ -1,13 +1,3 @@
-FROM centos
+FROM httpd:2.4
 
-LABEL project="ITzGeek Demo image"
-LABEL maintainer "itzgeek.web@gmail.com"
-
-RUN yum -y install httpd
-
-EXPOSE 80
-
-VOLUME /var/www/html
-
-ENTRYPOINT [ "/usr/sbin/httpd" ]
-CMD ["-D", "FOREGROUND"]
+COPY apache_default.html /usr/local/apache2/htdocs/index.html
