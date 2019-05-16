@@ -1,3 +1,3 @@
 FROM httpd:2.4
 
-COPY data.txt /usr/local/apache2/htdocs/data.txt
+COPY txt2html.sh /usr/local/apache2/htdocs/txt2html.sh
